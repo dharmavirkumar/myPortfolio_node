@@ -14,7 +14,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 app.use("/user",route);
-
+app.get("/",(req,res)=>{
+    res.render("Home")
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port,()=>{
