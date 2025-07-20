@@ -16,7 +16,7 @@ const tryShema = mongoose.Schema({
         require:true,
         
     },
-    massage:{
+    message:{
         type:String,
         require:true,
     },
