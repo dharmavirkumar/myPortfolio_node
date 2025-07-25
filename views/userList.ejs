@@ -1,0 +1,29 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<%- include('partial/nav') %>
+
+<div class="p-6">
+  <table class="min-w-full table-auto border border-gray-300">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="border px-4 py-2 text-left">Name</th>
+        <th class="border px-4 py-2 text-left">Email</th>
+        <th class="border px-4 py-2 text-left">Contact</th>
+        <th class="border px-4 py-2 text-left">Message</th>
+        <th class="border px-4 py-2 text-left">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% users.forEach(user => { %>
+        <tr class="hover:bg-gray-50">
+          <td class="border px-4 py-2"><%= user.name %></td>
+          <td class="border px-4 py-2"><%= user.email %></td>
+          <td class="border px-4 py-2"><%= user.contact %></td>
+          <td class="border px-4 py-2"><%= user.message %></td>
+          <td class=" border px-4 py-2">Delete/Edit</td>
+          
+
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>

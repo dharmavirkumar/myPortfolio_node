@@ -11,6 +11,9 @@ route.get("/",(req,res)=>{
 route.get("/about",(req,res)=>{
     res.render('About');
 })
+route.get("/Certification",(req,res)=>{
+    res.render('Certification');
+})
 
 route.get("/skill",(req,res)=>{
     res.render('Skill');
@@ -39,6 +42,11 @@ route.post("/contact", async (req, res) => {
         console.error('Error saving contact:', error);
         return res.render('Contact', { error: 'Something went wrong. Please try again.' });
     }
+});
+
+route.get("/use", async (req, res) => {
+  const users = await User.find(); // Use await
+  res.render("userList", { users }); // Pass with name `users`
 });
 
 
